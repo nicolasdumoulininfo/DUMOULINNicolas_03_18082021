@@ -1,0 +1,21 @@
+//Ensembles des variables===============================
+
+//definition des couleurs===============================
+
+$couleur-primaire: #9356DC;
+$couleur-primaire-lighten:rgba(147,86,220,0.8);
+$couleur-secondaire: #ff79da;
+$couleur-secondaire-lighten:rgba(255,121,218,0.8);
+$couleur-tertiaire: #99e2d0;
+$couleur-fond-gris:rgb(245, 245, 245);
+$couleur-fond-gris-local:rgb(241, 234, 234);
+$couleur-text-nouveau:rgb(14, 58, 14);
+$couleur-bouton:linear-gradient($couleur-secondaire,$couleur-primaire);
+$couleur-btn-hover:linear-gradient($couleur-secondaire-lighten,$couleur-primaire-lighten);
+
+//polices d'ecriture====================================
+
+$font1:"Shrikhand";
+$font2:"roboto";
+
+

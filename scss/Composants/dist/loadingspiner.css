@@ -1,0 +1,22 @@
+.loading {
+  display: flex;
+  justify-content: center;
+}
+.loading::after {
+  content: "";
+  width: 58px;
+  height: 58px;
+  border: 10px solid transparent;
+  border-top-color: green;
+  border-bottom-color: blue;
+  border-radius: 50%;
+  z-index: 3000;
+  animation-name: "loading";
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+.aligneloading {
+  align-items: center;
+  height: 100%;
+}

@@ -1,0 +1,28 @@
+//pied de page - footer===========================================
+.footer{
+    background-color: black;
+    height:13rem;
+    color: white;
+    padding-left: 2rem;
+    // @include desktop{ 
+    //     height:auto;
+    // }
+    &__bloc{
+        @include footer__bloc;
+
+        &__icone{
+            @include footer__bloc__icone;
+        }
+        &__text{
+            @include footer__bloc__text;
+        }
+    }
+    &--titre{
+        @include footer--titre;
+
+    }
+    &--texte{
+        @include footer--texte;
+       
+    }
+}//footer

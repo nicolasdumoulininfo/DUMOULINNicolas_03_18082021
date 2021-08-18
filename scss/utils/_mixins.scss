@@ -1,0 +1,96 @@
+//Les mixines======================================
+
+
+
+//en tete==========================================
+
+@mixin header__titreprincipal{
+    font-family:"shrikhand";
+    color:black;
+    font-size: 2.1rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom:1.5rem;
+    position: relative;
+}
+
+@mixin header__titremenu{
+    font-family:"shrikhand";
+    color:black;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+//Titre h2 pour Partie Fonctionnement / Restaurant=====================================
+@mixin titre{
+    font-family: "roboto";
+    padding-left: 1.4rem;
+    padding-bottom: 1rem;
+    font-size: 1.6rem;
+    @include destock{
+        font-size:2.5em;
+    }
+    
+}
+//Pied de page=====================================
+
+@mixin footer__bloc {
+    width:100%;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+@mixin footer__bloc__icone{
+    width: 6%;
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+    margin-top:0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-right: 0.4rem;
+    @include destock{
+        width: 2%
+    }
+
+}
+@mixin footer__bloc__text{
+    margin-bottom: 0px;
+    margin-top:0px;
+}
+@mixin footer--texte {
+    padding-bottom:0px;
+    padding-top: 0px;
+    margin-bottom: 0.5em;
+    margin-top:0px;
+    text-decoration: none;
+    color:whitesmoke;
+    font-family:$font2;
+    font-weight:bolder;
+}
+
+@mixin footer--titre{
+    margin-top:0px;
+    padding-top: 1em;
+    font-family:$font1;
+    font-size: 1.3rem;
+}
+//Media queries=======================================
+
+@mixin destock{
+    @media only screen and (min-width: 1024px){
+        @content;
+    }
+}
+
+@mixin tablette{
+    @media only screen and (min-width: 768px) and (max-width: 1023px){
+        @content;
+    }
+}
+
+@mixin phone{
+    @media only screen and (max-width: 767px){
+        @content;
+    }
+}

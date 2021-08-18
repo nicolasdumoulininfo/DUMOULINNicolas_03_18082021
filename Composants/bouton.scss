@@ -1,0 +1,34 @@
+//Les boutons================================================================
+.btn{
+    color:white;
+    background: $couleur-bouton;
+    cursor: pointer;
+    border-radius: 10rem;
+    padding: 1.3rem 1.6rem;
+    font-family: $font2;
+    font-weight: 500;
+    &:hover {
+        background: $couleur-btn-hover;
+    }
+    &--explorernosrestaurant{
+        font-size: 1rem;
+        min-width: 1.5rem;
+        @include destock{
+            font-size: 1.4em;
+        }
+    }
+    &--commande{
+        margin-top:2.5em;
+        text-align: center;
+        margin-top:0.3em;
+        width:10em;
+        font-size:1.1rem;
+    }
+}
+
+/*.btn-retour{
+    position: absolute;
+    font-size:2rem;
+    top:75px;
+    left:100px;
+}*/

@@ -1,0 +1,33 @@
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loading::after {
+  content: "";
+  width: 58px;
+  height: 58px;
+  border: 10px solid blue;
+  border-top-color: red;
+  border-bottom-color: yellow;
+  border-radius: 50%;
+  z-index: 3000;
+  -webkit-animation-name: "loading";
+          animation-name: "loading";
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.aligneloading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+/*# sourceMappingURL=loadingspiner.css.map */

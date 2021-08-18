@@ -1,0 +1,35 @@
+{
+  "name": "p3_dumoulin_nicolas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "sass": "sass --watch ./main.scss:./CSS/style.css",
+    "buildCss": "npx gulp makeCss",
+    "watch": "npx gulp watch"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-ejs": "^5.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.36.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolasdumoulininfo/DUMOULINNicolas_03_26062021.git"
+  },
+  "author": "N dumoulin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolasdumoulininfo/DUMOULINNicolas_03_26062021/issues"
+  },
+  "homepage": "https://github.com/nicolasdumoulininfo/DUMOULINNicolas_03_26062021#readme"
+}

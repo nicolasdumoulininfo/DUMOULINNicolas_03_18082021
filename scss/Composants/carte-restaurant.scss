@@ -1,0 +1,98 @@
+article.resto {
+  display: grid;
+  grid-template-areas:
+    "image image"
+    "nom coeur"
+    "adresse coeur";
+    grid-template-columns:auto 3rem;
+    grid-template-rows: auto 3rem 3rem;
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: 0px 5px 15px #ccbbbb;
+    width: 90%;
+    @include destock{
+      margin-right:1rem;
+    }
+    @include phone{
+      margin-bottom: 1rem;
+      
+    }
+   
+  a {
+    grid-area: image;
+  }
+  p {
+    grid-area: nom;
+    font-size: 1.3rem;
+    font-family:$font2;
+    font-weight: 900;
+    color: black;
+    padding-left: 1rem;
+  }
+  i {
+    grid-area: coeur;
+    display: flex;
+    font-size: 1.4rem;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    justify-self: flex-end;
+    align-self: center;
+    padding-right: 2rem;
+    &:hover{
+      //font-weight:bold;
+      font-weight:bold;
+      background: -webkit-linear-gradient(white,$couleur-primaire);
+      //background: linear-gradient($couleur-primaire 50%, white 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-duration:5s;
+      animation-name: anim-coeur;
+      animation-fill-mode: forwards;
+      animation-delay:0;
+    }
+  }
+  address {
+    grid-area: adresse;
+    font-family:$font2;
+    font-style: normal;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    margin-top: 0px;
+  }
+  img{
+    width:100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0 ;
+    @include destock{
+      min-height:400px;
+    }
+    @include phone{
+      max-height:380px;
+    }
+  }
+  &.nouveau::after{
+      content:"Nouveau";
+      display: flex;
+      height: 1.7rem;
+      justify-self: center;
+      //========j'ajoute
+      color:$couleur-text-nouveau;
+      grid-column-start: 1;
+      grid-row-start: 1;
+      justify-self: flex-end;
+      margin-top: 1.2rem;
+      margin-right:-2rem;
+      font-size:1rem;
+      text-align: center;
+      background-color:$couleur-tertiaire;
+      color:$couleur-text-nouveau;
+      font-weight: bold;
+      font-family:$font2;
+      padding-left: 0.7rem;
+      padding-right: 0.7rem;
+      padding-top: 0.4rem;
+  }
+    
+}

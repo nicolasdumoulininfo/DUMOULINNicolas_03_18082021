@@ -1,0 +1,435 @@
+
+    @import "./utils/variables";
+    @import "./utils/fonctions";
+    @import "./utils/mixins";
+    @import "./utils/animation";
+    @import "./Composants/carte-restaurant";
+    @import "./Composants/bouton";
+    @import "./Composants/footer";
+    @import "./Composants/headerresto";
+    @import "./Composants/loadingspiner";
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+
+//Page index.html partie header======================================================================
+.site{
+
+    .headerindex{
+        width:100%;
+
+        &__titreprincipal{
+            @include header__titreprincipal;
+        }
+        &__annonce{
+                @include destock{
+                    margin-bottom: 3em;
+                    padding-bottom: 2em;
+                }
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                box-shadow: Grey;
+                background-color: $couleur-fond-gris;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                font-family:$font2;
+                margin-bottom: 3rem;
+                padding-bottom: 3rem;
+                &__local{
+                    display:grid;
+                    grid-template-areas:
+                     "icone text text";
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr;
+                    background-color:$couleur-fond-gris-local;
+                    box-shadow:inset 1px 6px rgba(10, 10, 7, 0.3);
+                    width: 100%;
+                    &__icone{
+                        grid-area: icone;
+                        grid-column-start: 1;
+                        grid-column-end: 1;
+                        justify-self: self-end;
+                        align-self: center;
+                        font-size: 1.2rem;
+                        padding-right: 1rem;
+                    }
+                    &__text{
+                        grid-area: text;
+                        grid-column-start: 2;
+                        grid-column-end:2 ;
+                        //width: 60%;
+                        //padding-left:1.5rem;
+                        //text-align:left;
+                        font-size: 1.1rem;
+                        font-weight: lighter;
+                    }
+                }
+                &__text{
+                    font-family:$font2;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+        
+                    &__h2first{
+                        padding-top: 3rem;
+                        font-size: 1.5rem;
+                        font-family:$font2;
+                        @include destock{
+                            padding-top: 3rem;
+                            font-size: 2rem
+                        }
+                    }
+                    &__h2{
+                        font-size: 1.5rem;
+                        font-family:$font2;
+                        @include destock{
+                            font-size: 2rem
+                        }
+                    }
+                    &__commentairefirst{
+                        padding-top:1.2rem;
+                        color:black;
+                        font-weight: lighter;
+                        font-family:$font2;
+                        font-size: 1.2rem;
+                        width: 100%;
+                        @include destock{
+                            font-size: 2rem
+                        }
+                    }
+                    &__commentaire{
+                        color:black;
+                        font-weight: lighter;
+                        font-family:$font2;
+                        font-size: 1.2rem;
+                        width: 100%;
+                        @include destock{
+                            font-size: 2rem
+                        }
+                    }
+                    &__btn{
+                        margin-top:2rem;
+                    }
+               }
+       }
+    }//headerindex
+
+    //Page index.html Partie Fonctionnement===================================================
+    
+    .sidebar{
+        @include destock{
+        }
+        .titre-fonctionnement{
+            @include titre; 
+        }
+        .container-fonct{
+            position:relative;
+            margin-left: 5px;
+            margin-right:5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+
+            &__bloc-bouton{
+                @include destock{
+                    display:flex;
+                    flex-direction:row;
+                    justify-content: space-evenly;
+                    width:100%;
+                }
+                @include tablette{
+                }
+                &__btn{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position:relative;
+                    color:black;
+                    padding:0.5rem 4rem 0.5rem 2rem;
+                    border-radius: 15px;
+                    font-weight: bold;
+                    background:$couleur-fond-gris-local;
+                    cursor: pointer;
+                    margin: 0rem 0rem 1.5rem 0rem;
+                    box-shadow: 0px 5px 15px #ccbbbb;
+                    min-width: 10rem; 
+                    font-size: 1.2rem;
+                        @include destock{
+                        font-size: 1.1em;
+                        padding:0.5em 2.2em 0.5em 1em;
+                        min-width:13.4em;
+                        margin-left:2em;
+                        }        
+                    &:hover {
+                        background-color:lighten($couleur-fond-gris-local, 3%);
+                        box-shadow: 0px 5px 30px #a8a2a2;
+                        }
+                    &__numeroetape{
+                        position:absolute;
+                        left:-1rem;
+                        border-radius:50%;
+                        background-color: $couleur-primaire;
+                        padding:10px 11px;
+                        color:white;
+                        font-size: 0.7rem; 
+                        @include destock{
+                            font-size: 0.8em;
+                        }
+                    }//numeroetape
+                    .position-icone{
+                        margin-right:1.4em;
+                        font-size: 1.2em;
+                        &.spe-size{
+                            font-size: 1em; 
+                        }
+                        &.couleur{
+                            color:$couleur-primaire;
+                        } 
+                    }//position-icone
+
+                }//bloc-bouton__btn
+
+            }//bloc-bouton
+            
+        }//container-fonct
+
+    }//sidebar
+
+    //Page index.html - partie Restaurant=======================================================
+    
+    .bodyresto{
+        @include destock{
+            padding-bottom:3em;
+            background-color: $couleur-fond-gris;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            
+        }
+        .titre-fonctionnement{
+            @include titre;
+            &--partie-restaurant{
+                background-color: $couleur-fond-gris;
+                padding-bottom: 1rem;
+                padding-top:2em;
+                margin-bottom: 0px;
+                @include destock{
+                    padding-top:0;
+                }
+                
+            }
+        }
+        &__conteneur-Resto{
+            display: flex;
+            background-color: $couleur-fond-gris;
+            @include phone{
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 50px;
+                margin-bottom: 0px;
+            }
+            @include destock{
+                flex-direction: row;
+                width:100%;
+                    &__cards{
+                        margin:0px 10px 0px 10px;
+                        height: 100%;
+                        &:hover{
+                            transition:transform 330ms ease-in-out;
+                            transform:scale(1.02);
+                        }
+                    }  
+            }  
+            @include tablette{
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 150px;
+                margin-bottom: 0px; 
+            }  
+        }//conteneur-Resto
+
+    }//bodyresto
+ 
+}
+//Page menu des Restaurants - header et footer commun==============================
+
+        .couleur-fond-body{
+            background-color:$couleur-fond-gris;
+
+            .menu{
+                position:relative;
+                top:-120px;
+                background-color:$couleur-fond-gris;
+                border-radius: 30px 30px 0 0;
+                width: 100%;
+                margin-left:0px;
+                margin-right:0px;
+                @include destock{
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-content: center;
+                    
+                }
+                &__titre{
+                    display:flex;
+                    flex-direction: row;
+                    align-items: center;
+                    align-content: center;
+                    justify-content:space-between;
+                    width: 100%;
+                    margin-bottom:1rem;
+                    @include destock{
+                        justify-content:center;
+                    }
+                    
+                    &__intitule{
+                        width: 80%;
+                        padding-top:1.4rem;
+                        font-size: 1.5rem;
+                        font-family:$font1;
+                        font-weight:bolder; 
+                        padding-left:1rem;
+                        @include destock{
+                            width:auto;
+                            padding-right:1rem;
+                        }
+                    }
+                    &__coeur{
+                        padding-top:1.5rem;
+                        width: 15%;
+                        font-size:1.5rem;
+                        i:hover{
+                            font-weight:bold;
+                            //font-weight:bold;
+                            background: -webkit-linear-gradient(white,$couleur-primaire);
+                            //background: -webkit-linear-gradient(bottom to top, blue,$couleur-primaire);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            animation-timing-function: linear;
+                            animation-iteration-count: 1;
+                            animation-duration:5s;
+                            animation-name: anim-coeur;
+                            animation-fill-mode: forwards;
+                            animation-delay:0;
+                            //linear-gradient(to right, blue, white)
+                        }
+                    }
+                }//titre
+                &__blockctns{
+                    display: flex;
+                    flex-direction:column;
+                    width: 100%;
+                    @include destock{
+                        //display: flex;
+                        //flex-direction:row;
+                        //width: 100%;
+                        display:grid;
+                        grid-template-areas:
+                        "commander commander commander"
+                        "menu menu menu";
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-rows: 25% auto;
+                    }
+                    &__ctn{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        margin-left:1rem;
+                        margin-right:1rem;
+                        margin-bottom:2rem;
+                        @include destock{  
+                            //margin-top:50px;
+                            .div.menu_blockctns_cnt:nth-child(1){
+                                grid-area: menu;
+                                grid-row-start: 2;
+                                grid-column-start: 1;
+                                grid-column-end:1;
+                                }   
+
+                            .div.menu_blockctns_cnt:nth-child(2){
+                                grid-area: menu;
+                                grid-row-start: 2;
+                                grid-column-start: 2;
+                                grid-column-end:2;
+                                }  
+                            .div.menu_blockctns_cnt:nth-child(3){
+                                grid-area: menu;
+                                grid-row-start: 2;
+                                grid-column-start: 3;
+                                grid-column-end:3;
+                                }    
+                        }
+                        &__titre{
+                            font-size: 1.2rem;
+                            font-family:$font2;
+                            padding-bottom: 0.3rem;
+                        }
+                        &__bordure{
+                            border-top:solid 3px $couleur-tertiaire;
+                            width: 15%;
+                            @include destock{
+                                margin-top:-5px;
+                            }
+                        }
+                        &__bloc-cards{
+                            display: flex;
+                            justify-content:space-evenly;
+                            flex-direction: column;
+                            @include destock{
+                                min-width:21rem;
+                            }
+                            &:nth-child(1){
+                                transition: all 2s;
+                                animation-name:"anim-menu";
+                                animation-delay: 2s;
+                                animation-duration:2s;
+                                animation-iteration-count: 1;
+                                animation-fill-mode: backwards;
+                               
+
+                            }
+
+                            
+                        }//bloc-cards
+            
+                    }//ctn
+                    &__ctn__btn-commande{
+                        @include phone{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        @include tablette{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        @include destock{
+                            grid-area: commander;
+                            grid-row-start: 1;
+                            grid-row-end: 1;
+                            grid-column-start: 1;
+                            grid-column-end: span 3;
+                            align-self: center;
+                            justify-self: center;
+                        }
+                     
+                    }//ctn__btn-commande
+
+                }//blockctns
+
+            }//menu
+            
+        }//body
+        
