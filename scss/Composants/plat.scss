@@ -14,6 +14,8 @@ article.card{
       font-family:$font2;
       padding-left:1rem;
       margin:0px;
+      overflow: hidden;
+      text-overflow: ellipsis;
       width: calc(100% - 5rem);
       transition:width 1s;
       p:first-of-type{
@@ -49,7 +51,7 @@ article.card{
      
   }
   aside{
-      background-color: green;  
+      background-color:$couleur-tertiaire;  
       color: white;
       width:0rem;
       overflow: hidden;
