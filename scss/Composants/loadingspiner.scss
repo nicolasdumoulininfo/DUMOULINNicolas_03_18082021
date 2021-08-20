@@ -11,7 +11,7 @@
     align-items: center;
     overflow: hidden;
     animation: loaderSpinnerTimeOut 3s both;
-    background-color: white;
+    background-color: rgb(150, 135, 135);
     
     div:nth-child(2n){
         display:flex;
@@ -31,7 +31,6 @@
         }
 
         i {
-        
             font-size:1.5rem;
             color:$couleur-tertiaire;
             transform: rotate(0.5turn);
