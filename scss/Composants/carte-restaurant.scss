@@ -66,10 +66,10 @@ article.resto {
     object-fit: cover;
     border-radius: 20px 20px 0 0 ;
     @include destock{
-      min-height:400px;
+        min-height:400px;
     }
     @include phone{
-      max-height: 190px;
+      height: 190px;
     }
   }
   &.nouveau::after{

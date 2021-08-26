@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "sass": "sass --watch ./main.scss:./CSS/style.css",
+    "sass": "sass --watch ./scss/main.scss:./CSS/style.css",
     "buildCss": "npx gulp makeCss",
     "watch": "npx gulp watch"
   },

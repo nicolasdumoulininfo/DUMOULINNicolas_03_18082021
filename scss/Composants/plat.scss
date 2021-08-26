@@ -51,7 +51,7 @@ article.card{
      
   }
   aside{
-      background-color:$couleur-tertiaire;  
+      background-color:red;  
       color: white;
       width:0rem;
       overflow: hidden;
@@ -69,8 +69,8 @@ article.card{
           font-family: "Font Awesome 5 Free";
           font-weight: 400;
           text-align: center;
-          transform: rotate(90deg);
-          transition: transform 1s;
+          transform: rotate(10turn);
+          transition: transform 3s;
           
       }
     
