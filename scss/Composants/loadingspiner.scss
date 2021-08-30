@@ -11,7 +11,8 @@
     align-items: center;
     overflow: hidden;
     animation: loaderSpinnerTimeOut 3s both;
-    background-color: rgb(150, 135, 135);
+    background-color:rgb(255,255,255);
+    z-index:2000;
     
     div:nth-child(2n){
         display:flex;

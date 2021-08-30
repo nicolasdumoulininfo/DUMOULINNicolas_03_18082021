@@ -17,6 +17,9 @@ article.resto {
       margin-bottom: 1rem;
       
     }
+    @include tablette{
+      margin-bottom: 2rem;
+    }
    
   a {
     grid-area: image;
@@ -66,10 +69,13 @@ article.resto {
     object-fit: cover;
     border-radius: 20px 20px 0 0 ;
     @include destock{
-        min-height:400px;
+      height:400px;
     }
     @include phone{
       height: 190px;
+    }
+    @include tablette{
+      height: 500px;
     }
   }
   &.nouveau::after{

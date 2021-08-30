@@ -1,4 +1,4 @@
-$cocheVisible : 15rem;
+
 
 article.card{
   cursor: pointer;
@@ -9,7 +9,8 @@ article.card{
   box-shadow: 0px 5px 20px $couleur-fond-gris-local;
   display:flex;
   flex-direction: row;
- 
+  
+
   div {
       font-family:$font2;
       padding-left:1rem;
@@ -18,6 +19,7 @@ article.card{
       text-overflow: ellipsis;
       width: calc(100% - 5rem);
       transition:width 1s;
+      
       p:first-of-type{
           margin:0px;
           padding-top:1rem;
@@ -31,7 +33,7 @@ article.card{
           }
       p:nth-of-type(2){
           margin:0px;
-          font-size:0.9rem;
+          font-size:0.9rem; 
           padding-bottom:1rem;
            //necessaire pour text-overflow
            white-space: nowrap;
@@ -45,13 +47,13 @@ article.card{
       font-size: 1rem;
       font-weight: bold;
       display: flex;
-      width: 2rem;
-      border: 1px solid;
+      width: 2.5rem;
       align-items: flex-end;
      
   }
   aside{
-      background-color:red;  
+      background-color:$couleur-tertiaire;  
+      border-radius:0 15px 15px 0;
       color: white;
       width:0rem;
       overflow: hidden;
@@ -68,9 +70,10 @@ article.card{
           //font-family: FontAwesome;
           font-family: "Font Awesome 5 Free";
           font-weight: 400;
+          font-size:1.3rem;
           text-align: center;
-          transform: rotate(10turn);
-          transition: transform 3s;
+          transform: rotate(2turn);
+          transition: transform linear 1s;
           
       }
     

@@ -29,7 +29,7 @@
   }
 }
 
-@keyframes opacity {
+@keyframes anim-opacity {
     0%   { 
         opacity: 0; 
         overflow: hidden;
@@ -82,11 +82,14 @@
 //animation menu affichage progressif=====================================================================================
 @keyframes anim-menu { 
     from{
-        opacity: 0;
+        transform:translateY(10vh);
+        opacity:0;
     } 
 
     to{
+        transform:translateY(0px);
         opacity: 1;
+        text-overflow: visible;
     }
     
 }

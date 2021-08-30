@@ -1,13 +1,4 @@
 
-    @import "./utils/variables";
-    @import "./utils/fonctions";
-    @import "./utils/mixins";
-    @import "./utils/animation";
-    @import "./Composants/carte-restaurant";
-    @import "./Composants/bouton";
-    @import "./Composants/footer";
-    @import "./Composants/headerresto";
-    @import "./Composants/loadingspiner";
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 
 //Page index.html partie header======================================================================
@@ -43,7 +34,7 @@
                     grid-template-columns: 1fr 1fr 1fr;
                     grid-template-rows: 1fr;
                     background-color:$couleur-fond-gris-local;
-                    box-shadow:inset 1px 6px rgba(10, 10, 7, 0.3);
+                    box-shadow:inset 0px 3px rgba(10, 10, 7, 0.08);
                     width: 100%;
                     &__icone{
                         grid-area: icone;
@@ -145,6 +136,11 @@
                     width:100%;
                 }
                 @include tablette{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 35rem;  
                 }
                 &__btn{
                     display: flex;
@@ -255,6 +251,9 @@
                 align-items: center;
                 padding-bottom: 150px;
                 margin-bottom: 0px; 
+                justify-content: space-around;
+                margin-bottom: 1rem;
+                
             }  
         }//conteneur-Resto
 
@@ -340,7 +339,9 @@
                         "menu menu menu";
                         grid-template-columns: 1fr 1fr 1fr;
                         grid-template-rows: 25% auto;
+                        align-items: flex-start;
                     }
+                   
                     &__ctn{
                         display: flex;
                         flex-direction: column;
@@ -349,6 +350,7 @@
                         margin-right:1rem;
                         margin-bottom:2rem;
                         @include destock{  
+                            
                             //margin-top:50px;
                             .div.menu_blockctns_cnt:nth-child(1){
                                 grid-area: menu;
@@ -389,16 +391,18 @@
                             @include destock{
                                 min-width:21rem;
                             }
-                            &:nth-child(1){
-                                transition: all 2s;
-                                animation-name:"anim-menu";
-                                animation-delay: 2s;
-                                animation-duration:2s;
-                                animation-iteration-count: 1;
-                                animation-fill-mode: backwards;
-                               
-
-                            }
+                            article:first-of-type{
+                                animation: anim-menu 1.5s 0s ease-in-out 1;
+                              }
+                            article:nth-of-type(2){
+                                animation: anim-menu 2.5s 0s ease-in-out 1;
+                              }
+                            article:nth-of-type(3){
+                                animation: anim-menu 3.5s 0s ease-in-out 1;
+                              }
+                            article:nth-of-type(4){
+                                animation: anim-menu 4.5s 0s ease-in-out 1;
+                              }
 
                             
                         }//bloc-cards
