@@ -6,7 +6,7 @@ article.resto {
     "adresse coeur";
     grid-template-columns:auto 3rem;
     grid-template-rows: auto 3rem 3rem;
-    border-radius: 25px;
+    border-radius: 18px;
     background-color: white;
     box-shadow: 0px 5px 15px #ccbbbb;
     width: 90%;
@@ -73,6 +73,7 @@ article.resto {
     }
     @include phone{
       height: 190px;
+
     }
     @include tablette{
       height: 500px;

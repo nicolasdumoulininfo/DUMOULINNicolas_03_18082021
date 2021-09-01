@@ -13,6 +13,8 @@ $couleur-text-nouveau:rgb(14, 58, 14);
 $couleur-bouton:linear-gradient($couleur-secondaire,$couleur-primaire);
 $couleur-btn-hover:linear-gradient($couleur-secondaire-lighten,$couleur-primaire-lighten);
 $couleur-icone-btn:rgb(121,115,115);
+$couleur-fond-menu:#f0f0f5;
+$couleur-boxshadow-plat:#d1d1e0;
 //polices d'ecriture====================================
 
 $font1:"Shrikhand";
@@ -20,3 +22,4 @@ $font2:"roboto";
 
 //plats.scss largeur coche
 $cocheVisible : 6.5rem;
+$numero:2;

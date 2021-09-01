@@ -4,7 +4,7 @@
     "fleche titre ."
     "image image image";
     grid-template-columns: 1fr auto 1fr;
-    grid-template-rows:15% auto;
+    grid-template-rows:20% auto;
     align-items: center;
 
     h1{
@@ -41,6 +41,9 @@
         grid-area: image;
         width:100%;
         object-fit: cover;
+        @include phone{
+            max-height:300px;
+        }
         @include destock{
             height:450px;
         }
