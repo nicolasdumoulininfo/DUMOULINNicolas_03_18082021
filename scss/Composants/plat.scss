@@ -17,7 +17,7 @@ article.card{
       margin:0px;
       overflow: hidden;
       text-overflow: ellipsis;
-      width: calc(100% - 5rem);
+      width: calc(100% - 1rem);
       transition:width 1s;
       
       p:first-of-type{
@@ -47,7 +47,7 @@ article.card{
       font-size: 1rem;
       font-weight: bold;
       display: flex;
-      width: 2.5rem;
+      width: 3.5rem;
       align-items: flex-end;
       padding-top: 2.6rem;
      
