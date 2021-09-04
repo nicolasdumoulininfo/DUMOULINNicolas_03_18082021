@@ -9,10 +9,12 @@
     font-weight: 500;
     &:hover {
         background: $couleur-btn-hover;
+        
     }
     &--explorernosrestaurant{
         font-size: 1rem;
         min-width: 1.5rem;
+    
         @include destock{
             font-size: 1.4em;
         }
@@ -25,10 +27,3 @@
         font-size:1.1rem;
     }
 }
-
-/*.btn-retour{
-    position: absolute;
-    font-size:2rem;
-    top:75px;
-    left:100px;
-}*/

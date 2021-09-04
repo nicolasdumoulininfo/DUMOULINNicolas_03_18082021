@@ -10,6 +10,10 @@ aside.resto {
     background-color: white;
     box-shadow: 0px 5px 15px #ccbbbb;
     width: 90%;
+    &:hover{
+      transition:transform 330ms ease-in-out;
+      transform:scale(1.02);
+    }
     @include destock{
       margin-right:1rem;
     }

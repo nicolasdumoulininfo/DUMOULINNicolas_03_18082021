@@ -143,7 +143,7 @@ body{
                 background-color: white;
 
                 &__bloc-bouton{
-                    margin:1rem;
+                    margin:1.5rem;
                     @include destock{
                         display:flex;
                         flex-direction:row;
@@ -182,18 +182,6 @@ body{
                             background-color:lighten($couleur-fond-gris-local, 3%);
                             box-shadow: 0px 5px 30px #a8a2a2;
                             }
-                        &__numeroetape{
-                            position:absolute;
-                            left:-1rem;
-                            border-radius:50%;
-                            background-color: $couleur-primaire;
-                            padding:10px 11px;
-                            color:white;
-                            font-size: 0.7rem; 
-                            @include destock{
-                                font-size: 0.8em;
-                            }
-                        }//numeroetape
                         .position-icone{
                             margin-right:1.4em;
                             font-size: 1.2em;
@@ -251,14 +239,14 @@ body{
                 @include destock{
                     flex-direction: row;
                     width:100%;
-                        &__cards{
+                        /*&__cards{
                             margin:0px 10px 0px 10px;
                             height: 100%;
                             &:hover{
                                 transition:transform 330ms ease-in-out;
                                 transform:scale(1.02);
                             }
-                        }  
+                        } */ 
                 }  
                 @include tablette{
                     width: 100%;
@@ -327,9 +315,7 @@ body{
                         font-size:1.5rem;
                         i:hover{
                             font-weight:bold;
-                            //font-weight:bold;
-                            background: -webkit-linear-gradient(white,$couleur-primaire);
-                            //background: -webkit-linear-gradient(bottom to top, blue,$couleur-primaire);
+                            background: -webkit-linear-gradient(white,$couleur-primaire); 
                             -webkit-background-clip: text;
                             -webkit-text-fill-color: transparent;
                             animation-timing-function: linear;
@@ -338,7 +324,7 @@ body{
                             animation-name: anim-coeur;
                             animation-fill-mode: forwards;
                             animation-delay:0;
-                            //linear-gradient(to right, blue, white)
+                           
                         }
                     }
                 }//titre
