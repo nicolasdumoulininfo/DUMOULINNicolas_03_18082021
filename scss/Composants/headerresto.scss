@@ -44,8 +44,11 @@
         @include phone{
             max-height:300px;
         }
-        @include destock{
+        @include desktop{
             height:450px;
+        }
+        @include tablette{
+            height:350px;
         }
         
     }

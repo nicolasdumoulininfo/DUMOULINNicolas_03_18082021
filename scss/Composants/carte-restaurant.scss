@@ -14,7 +14,7 @@ aside.resto {
       transition:transform 330ms ease-in-out;
       transform:scale(1.02);
     }
-    @include destock{
+    @include desktop{
       margin-right:1rem;
     }
     @include phone{
@@ -43,21 +43,13 @@ aside.resto {
     grid-column-start: 1;
     grid-row-start: 2;
     justify-self: flex-end;
-    align-self: center;
+    align-items: center;
     padding-right: 2rem;
+    //new
+    height:5rem;
+
     &:hover{
-      //font-weight:bold;
-      font-weight:bold;
-      background: -webkit-linear-gradient(white,$couleur-primaire);
-      //background: linear-gradient($couleur-primaire 50%, white 50%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation-timing-function: linear;
-      animation-iteration-count: 1;
-      animation-duration:5s;
-      animation-name: anim-coeur;
-      animation-fill-mode: forwards;
-      animation-delay:0;
+      @include animation-coeur;
     }
   }
   address {
@@ -72,7 +64,7 @@ aside.resto {
     width:100%;
     object-fit: cover;
     border-radius: 20px 20px 0 0 ;
-    @include destock{
+    @include desktop{
       height:400px;
     }
     @include phone{

@@ -44,6 +44,7 @@
     .couleur{
         color:$couleur-primaire;
     }
+    //numero de l'étape, contenu du content:
     @for $i from 1 through 3 {
         &:nth-of-type(#{$i})::before {
             content:"#{$i}";

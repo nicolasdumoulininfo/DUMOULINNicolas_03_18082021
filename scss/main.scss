@@ -15,7 +15,7 @@ body{
                 @include header__titreprincipal;
             }
             &__annonce{
-                    @include destock{
+                    @include desktop{
                         margin-bottom: 3em;
                         padding-bottom: 2em;
                     }
@@ -36,7 +36,7 @@ body{
                         grid-template-areas:
                         "icone text text";
                         grid-template-columns: 30% 1fr;
-                        @include destock{ 
+                        @include desktop{ 
                             grid-template-columns: 42% 1fr 1fr;
                         }
                         @include tablette{
@@ -82,7 +82,7 @@ body{
                             padding-top: 3rem;
                             font-size: 1.5rem;
                             font-family:$font2;
-                            @include destock{
+                            @include desktop{
                                 padding-top: 3rem;
                                 font-size: 2rem
                             }
@@ -90,7 +90,7 @@ body{
                         &__h2{
                             font-size: 1.5rem;
                             font-family:$font2;
-                            @include destock{
+                            @include desktop{
                                 font-size: 2rem
                             }
                         }
@@ -101,7 +101,7 @@ body{
                             font-family:$font2;
                             font-size: 1.2rem;
                             width: 100%;
-                            @include destock{
+                            @include desktop{
                                 font-size: 2rem
                             }
                         }
@@ -111,7 +111,7 @@ body{
                             font-family:$font2;
                             font-size: 1.2rem;
                             width: 100%;
-                            @include destock{
+                            @include desktop{
                                 font-size: 2rem
                             }
                         }
@@ -125,7 +125,7 @@ body{
         //Page index.html Partie Fonctionnement===================================================
         
         .sidebar{
-            @include destock{
+            @include desktop{
             }
             .titre-fonctionnement{
                 @include titre; 
@@ -144,7 +144,7 @@ body{
 
                 &__bloc-bouton{
                     margin:1.5rem;
-                    @include destock{
+                    @include desktop{
                         display:flex;
                         flex-direction:row;
                         justify-content: space-evenly;
@@ -172,7 +172,7 @@ body{
                         box-shadow: 0px 5px 15px #ccbbbb;
                         min-width: 10rem; 
                         font-size: 1.2rem;
-                            @include destock{
+                            @include desktop{
                             font-size: 1.1em;
                             padding:0.5em 2.2em 0.5em 1em;
                             min-width:13.4em;
@@ -204,7 +204,7 @@ body{
         //Page index.html - partie Restaurant=======================================================
         
         .bodyresto{
-            @include destock{
+            @include desktop{
                 padding-bottom:3em;
                 background-color: $couleur-fond-gris;
                 display:flex;
@@ -220,7 +220,7 @@ body{
                     padding-bottom: 1rem;
                     padding-top:2em;
                     margin-bottom: 0px;
-                    @include destock{
+                    @include desktop{
                         padding-top:0;
                     }
                     
@@ -236,17 +236,9 @@ body{
                     padding-bottom: 50px;
                     margin-bottom: 0px;
                 }
-                @include destock{
+                @include desktop{
                     flex-direction: row;
                     width:100%;
-                        /*&__cards{
-                            margin:0px 10px 0px 10px;
-                            height: 100%;
-                            &:hover{
-                                transition:transform 330ms ease-in-out;
-                                transform:scale(1.02);
-                            }
-                        } */ 
                 }  
                 @include tablette{
                     width: 100%;
@@ -278,7 +270,7 @@ body{
                 width: 100%;
                 margin-left:0px;
                 margin-right:0px;
-                @include destock{
+                @include desktop{
                     display:flex;
                     flex-direction: column;
                     justify-content: center;
@@ -293,7 +285,7 @@ body{
                     justify-content:space-between;
                     width: 100%;
                     margin-bottom:1rem;
-                    @include destock{
+                    @include desktop{
                         justify-content:center;
                     }
                     
@@ -304,7 +296,7 @@ body{
                         font-family:$font1;
                         font-weight:bolder; 
                         padding-left:1rem;
-                        @include destock{
+                        @include desktop{
                             width:auto;
                             padding-right:1rem;
                         }
@@ -313,18 +305,13 @@ body{
                         padding-top:1.5rem;
                         width: 15%;
                         font-size:1.5rem;
+                        i{
+                            height:5rem;
+                            display: flex;
+                            align-items: center;
+                        }
                         i:hover{
-                            font-weight:bold;
-                            background: -webkit-linear-gradient(white,$couleur-primaire); 
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            animation-timing-function: linear;
-                            animation-iteration-count: 1;
-                            animation-duration:5s;
-                            animation-name: anim-coeur;
-                            animation-fill-mode: forwards;
-                            animation-delay:0;
-                           
+                            @include animation-coeur;
                         }
                     }
                 }//titre
@@ -332,10 +319,7 @@ body{
                     display: flex;
                     flex-direction:column;
                     width: 100%;
-                    @include destock{
-                        //display: flex;
-                        //flex-direction:row;
-                        //width: 100%;
+                    @include desktop{
                         display:grid;
                         grid-template-areas:
                         "commander commander commander"
@@ -352,9 +336,9 @@ body{
                         margin-left:1rem;
                         margin-right:1rem;
                         margin-bottom:2rem;
-                        @include destock{  
+                        @include desktop{  
                             
-                            //margin-top:50px;
+                            
                             .div.menu_blockctns_cnt:nth-child(1){
                                 grid-area: menu;
                                 grid-row-start: 2;
@@ -383,7 +367,7 @@ body{
                         &__bordure{
                             border-top:solid 3px $couleur-tertiaire;
                             width: 15%;
-                            @include destock{
+                            @include desktop{
                                 margin-top:-5px;
                             }
                         }
@@ -391,7 +375,7 @@ body{
                             display: flex;
                             justify-content:space-evenly;
                             flex-direction: column;
-                            @include destock{
+                            @include desktop{
                                 min-width:21rem;
                             }
                             article:first-of-type{
@@ -422,7 +406,7 @@ body{
                             justify-content: center;
                             align-items: center;
                         }
-                        @include destock{
+                        @include desktop{
                             grid-area: commander;
                             grid-row-start: 1;
                             grid-row-end: 1;
