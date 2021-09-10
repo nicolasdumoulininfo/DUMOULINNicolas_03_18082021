@@ -14,16 +14,13 @@
     font-family: $font2;
     background:$couleur-fond-gris-local;
     cursor: pointer;
-    box-shadow: 0px 5px 15px #ccbbbb;
+    box-shadow: 0px 5px 15px $couleur-bouton-etape;
     &:hover {
-        background-color:lighten($couleur-fond-gris-local, 3%);
+        background-color: $couleur-bouton-etape-hover;
         box-shadow: 0px 5px 30px #a8a2a2;
-        }
-
-       
+    }
           
     &::before{
-        // content:"1";
         font-size:0.9rem;
         display: flex;
         width: 1.5rem;
